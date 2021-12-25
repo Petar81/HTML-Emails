@@ -9,6 +9,9 @@
 	<!--<![endif]-->
 	<!-- Responsive layout is created using the viewport tag and CSS media queries; Pages optimized for a variety of devices must include a meta viewport tag in the head of the document. A meta viewport tag gives the browser instructions on how to control the page's dimensions and scaling. -->
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- By including this metadata in the <head> tag, we can ensure that Dark Mode is enabled in our email for subscribers that have Dark Mode turned on. -->
+	<meta name="color-scheme" content="light dark">
+	<meta name="supported-color-schemes" content="light dark">
 	<!-- These simple format-detection tags stop iOS from turning your phone numbers and dates into links; Apple’s default blue may not go well with your email’s color scheme. -->
 	<meta name="format-detection" content="date=no" />
 	<meta name="format-detection" content="telephone=no" />
@@ -20,6 +23,103 @@
 			padding: 0;
 			margin: 0;
 			font-family: "Arial Black", Helvetica, sans-serif;
+		}
+
+		/* Add Dark Mode styles for @media (prefers-color-scheme: dark) */
+		
+		@media (prefers-color-scheme: dark) {
+			/* Custom Dark Mode Images */
+			.darkmode_image {
+				display: block !important;
+				overflow: visible !important;
+				float: none !important;
+				max-height: inherit !important;
+				max-width: inherit !important;
+				line-height: auto !important;
+				margin-top: 0px !important;
+				visibility: inherit !important;
+			}
+			.darkmode_image_inline {
+				display: inline-block !important;
+				overflow: visible !important;
+				float: none !important;
+				max-height: inherit !important;
+				max-width: inherit !important;
+				line-height: auto !important;
+				margin-top: 0px !important;
+				visibility: inherit !important;
+			}
+			.lightmode_image {
+				display: none;
+				display: none !important;
+			}
+			/* Custom Dark Mode Background Color */
+			* {
+				background-color: #1a1a1a !important;
+			}
+			/* Custom Dark Mode Font Colors */
+			h3,
+			h4,
+			p,
+			span,
+			a {
+				color: #ffffff !important;
+			}
+
+			.redBG {
+				background-color: #e00420 !important;
+				color: #ffffff !important;
+			}
+
+			.whiteBackground {
+				background-color: #F0F0F0  !important;
+				color: #e00420 !important;
+			}
+
+			.borderBottomWhite {
+				border-bottom: 5px solid #ffffff !important;
+			}
+			/* Add this styling for support in Outlook app (Android). 
+			Custom Dark Mode Background Color */
+			[data-ogsc] * {
+				background-color: #1a1a1a !important;
+			}
+			[data-ogsb] * {
+				background-color: #1a1a1a !important;
+			}
+			/* Custom Dark Mode Font Colors */
+			[data-ogsc] h3,
+			[data-ogsc] h4,
+			[data-ogsc] p,
+			[data-ogsc] span,
+			[data-ogsc] a {
+				color: #ffffff !important;
+			}
+			[data-ogsb] h3,
+			[data-ogsb] h4,
+			[data-ogsb] p,
+			[data-ogsb] span,
+			[data-ogsb] a {
+				color: #ffffff !important;
+			}
+			[data-ogsc] .darkmode_image {
+				display: block !important;
+				width: auto !important;
+				overflow: visible !important;
+				float: none !important;
+				max-height: inherit !important;
+				max-width: inherit !important;
+				line-height: auto !important;
+				margin-top: 0px !important;
+				visibility: inherit !important;
+			}
+			[data-ogsc] .lightmode_image {
+				display: none;
+				display: none !important;
+			}
+			[data-ogsc] .darkmode {
+				background-color: #1a1a1a !important;
+			}
 		}
 		
 		@media only screen and (max-width: 640px) {
@@ -119,7 +219,7 @@
 					<!-- MAIN BLINK BANNER IMAGE TABLE 640px WIDTH -->
 					<table role="presentation" width="640" style="width:640px;" cellpadding="0" cellspacing="0" border="0" align="center" bgcolor="#ffffff">
 						<tr>
-							<td class="center" align="left" style="font-size: 0px; width: 640px; padding: 5px" bgcolor="#ffffff" width="640">
+							<td align="left" style="font-size: 0px; width: 640px; padding: 5px" bgcolor="#ffffff" width="640">
 								<a style="font-size: 0px" href="https://www.facebook.com/fcredstarchicago/" target="_blank"><img class="center" style="display: block" src="https://i.ibb.co/BLB4fkw/FCRSC-banner.png" width="640" alt="Signup for FC Red Star Chicago camp" /></a>
 							</td>
 							<!-- DVE KOLONE
@@ -132,23 +232,23 @@
 					</table>
 					<!-- END OF BLINK BANNER IMAGE TABLE 640px WIDTH -->
 					<!-- MAIN BANNER IMAGE TABLE 640px WIDTH -->
-					<table role="presentation" width="640" style="width:640px;" cellpadding="0" cellspacing="0" border="0" align="center" bgcolor="#F0F0F0">
+					<table class="redBG" role="presentation" width="640" style="width:640px;" cellpadding="0" cellspacing="0" border="0" align="center" bgcolor="#F0F0F0">
 						<tr>
-							<td class="w100pc mobile" align="center" style="font-size: 0px" bgcolor="#F0F0F0">
+							<td class="w100pc mobile redBG" align="center" style="font-size: 0px" bgcolor="#F0F0F0">
 								<a style="font-size: 0px" href="https://www.facebook.com/fcredstarchicago/" target="_blank"><img class="w100pc mobile" style="display: block" src="https://gallery.mailchimp.com/99237d4f3ba6067e8f72c4058/images/f5f46917-8bec-41ec-abe3-62703d99d692.jpg" width="640" alt="FC Red Star Chicago Soccer Camp participants" />i</a>
 							</td>
 						</tr>
 					</table>
 					<!-- END OF MAIN BANNER IMAGE TABLE 640px WIDTH -->
 					<!-- TIER 2 PRICING -->
-					<table style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color: #F0F0F0; width: 640px; text-align: center; color: #ffffff;" cellpadding="0" cellspacing="0" border="0" bgcolor="#F0F0F0" align="center" width="640">
+					<table class="redBG" style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color: #F0F0F0; width: 640px; text-align: center; color: #ffffff;" cellpadding="0" cellspacing="0" border="0" bgcolor="#F0F0F0" align="center" width="640">
 						<tr>
-							<td>
-								<table style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color: #e00420; width: 640px; text-align: center; color: #ffffff;" cellpadding="0" cellspacing="0" border="0" bgcolor="#e00420" align="center" width="640">
+							<td class="redBG">
+								<table class="redBG" style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color: #e00420; width: 640px; text-align: center; color: #ffffff;" cellpadding="0" cellspacing="0" border="0" bgcolor="#e00420" align="center" width="640">
 									<tr>
-										<td style="mso-padding-alt:0pt;mso-padding-bottom-alt:10pt;padding: 10px 10px;" align="center">
-											<h1 class="mobileFont center"> ⚽ SUMMER SOCCER CAMPS ⚽ </h1>
-											<h2 style="padding: 0; margin: 0" class="mobileFont center">LEARN THE BEAUTIFUL GAME</h2> </td>
+										<td class="redBG" style="mso-padding-alt:0pt;mso-padding-bottom-alt:10pt;padding: 10px 10px;" align="center">
+											<h1 class="mobileFont center redBG"> ⚽ SUMMER SOCCER CAMPS ⚽ </h1>
+											<h2 style="padding: 0; margin: 0" class="mobileFont center redBG">LEARN THE BEAUTIFUL GAME</h2> </td>
 									</tr>
 								</table>
 							</td>
@@ -156,25 +256,25 @@
 					</table>
 					<!-- END OF TIER 2 PRICING -->
 					<!-- CONTACT ICONS -->
-					<table style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color:#F0F0F0; width: 640px; text-align: center; color: #000000;" cellpadding="0" cellspacing="0" border="0" bgcolor="#F0F0F0" align="center" width="640">
+					<table class="redBG" style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color:#F0F0F0; width: 640px; text-align: center; color: #000000;" cellpadding="0" cellspacing="0" border="0" bgcolor="#F0F0F0" align="center" width="640">
 						<tr>
-							<td>
-								<table style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color: #ffffff; width: 606px; text-align: center; color: #000000;" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" align="center" width="606">
+							<td class="redBG">
+								<table class="redBG" style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color: #ffffff; width: 606px; text-align: center; color: #000000;" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" align="center" width="606">
 									<tr>
-										<td class="center" width="100%" style="padding: 20px 0">
-											<table width="100%" cellpadding="0" cellspacing="0" border="0">
+										<td class="center redBG" width="100%" style="padding: 20px 0">
+											<table class="redBG" width="100%" cellpadding="0" cellspacing="0" border="0">
 												<tr>
-													<td class="center" width="30%" align="center" style="padding: 0px 10px">
-														<h3 style="font-size: 32px; border-bottom: 5px solid red; margin: 0">11</h3>
-														<p style="font-size: 14px">CAMP WEEKS</p>
+													<td class="center redBG" width="30%" align="center" style="padding: 0px 10px">
+														<h3 class="redBG borderBottomWhite" style="font-size: 32px; border-bottom: 5px solid red; margin: 0">11</h3>
+														<p class="redBG" style="font-size: 14px">CAMP WEEKS</p>
 													</td>
-													<td class="center" width="30%" align="center" style="padding: 0px 10px">
-														<h3 style="font-size: 32px; border-bottom: 5px solid red; margin: 0">100's</h3>
-														<p style="font-size: 14px">ACTIVE CAMPERS</p>
+													<td class="center redBG" width="30%" align="center" style="padding: 0px 10px">
+														<h3 class="redBG borderBottomWhite" style="font-size: 32px; border-bottom: 5px solid red; margin: 0">100's</h3>
+														<p class="redBG" style="font-size: 14px">ACTIVE CAMPERS</p>
 													</td>
-													<td class="center" width="30%" align="center" style="padding: 0px 10px">
-														<h3 style="font-size: 32px; border-bottom: 5px solid red; margin: 0">1:10</h3>
-														<p style="font-size: 14px">COACH/CHILD RATIO</p>
+													<td class="center redBG" width="30%" align="center" style="padding: 0px 10px">
+														<h3 class="redBG borderBottomWhite" style="font-size: 32px; border-bottom: 5px solid red; margin: 0">1:10</h3>
+														<p class="redBG" style="font-size: 14px">COACH/CHILD RATIO</p>
 													</td>
 												</tr>
 											</table>
@@ -186,22 +286,22 @@
 					</table>
 					<!-- END OF CONTACT ICONS -->
 					<!-- FAKE TABLE - SPACER  -->
-					<table style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color: #F0F0F0; width: 640px; text-align: center;" cellpadding="0" cellspacing="0" border="0" bgcolor="#F0F0F0" align="center" width="640">
+					<table class="redBG" style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color: #F0F0F0; width: 640px; text-align: center;" cellpadding="0" cellspacing="0" border="0" bgcolor="#F0F0F0" align="center" width="640">
 						<tr>
-							<td style="font-size: 10px">
-								<p style="padding: 0; margin: 0">&nbsp;</p>
+							<td class="redBG" style="font-size: 10px">
+								<p class="redBG" style="padding: 0; margin: 0">&nbsp;</p>
 							</td>
 						</tr>
 					</table>
 					<!-- END OF FAKE TABLE - SPACER  -->
 					<!-- TIER SPECIAL PRICING -->
-					<table style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color: #F0F0F0; width: 640px; text-align: center; color: #ffffff;" cellpadding="0" cellspacing="0" border="0" bgcolor="#F0F0F0" align="center" width="640">
+					<table class="redBG" style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color: #F0F0F0; width: 640px; text-align: center; color: #ffffff;" cellpadding="0" cellspacing="0" border="0" bgcolor="#F0F0F0" align="center" width="640">
 						<tr>
-							<td>
-								<table style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color: #e00420; width: 606px; text-align: center; color: #ffffff;" cellpadding="0" cellspacing="0" border="0" bgcolor="#e00420" align="center" width="606">
+							<td class="redBG">
+								<table class="redBG" style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color: #e00420; width: 606px; text-align: center; color: #ffffff;" cellpadding="0" cellspacing="0" border="0" bgcolor="#e00420" align="center" width="606">
 									<tr>
-										<td style="mso-padding-alt:0pt;mso-padding-bottom-alt:10pt;padding: 10px 10px; font-family: 'Open Sans', Helvetica, Arial, sans-serif;" align="center">
-											<p style="padding: 0; margin: 0; font-size: 22px; font-weight: 800;"> A SOCCER CAMP YOUR KIDS WILL LOVE! </p>
+										<td class="redBG" style="mso-padding-alt:0pt;mso-padding-bottom-alt:10pt;padding: 10px 10px; font-family: 'Open Sans', Helvetica, Arial, sans-serif;" align="center">
+											<p class="redBG" style="padding: 0; margin: 0; font-size: 22px; font-weight: 800;"> A SOCCER CAMP YOUR KIDS WILL LOVE! </p>
 										</td>
 									</tr>
 								</table>
@@ -210,26 +310,26 @@
 					</table>
 					<!-- END OF TIER SPECIAL PRICING -->
 					<!-- BLINK GET SPECIAL PRICING BANNER -->
-					<table class="whiteBG" style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color: #F0F0F0; width: 640px; text-align: center; color: #ffffff;" cellpadding="0" cellspacing="0" border="0" bgcolor="#F0F0F0" align="center" width="640">
+					<table class="whiteBG redBG" style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color: #F0F0F0; width: 640px; text-align: center; color: #ffffff;" cellpadding="0" cellspacing="0" border="0" bgcolor="#F0F0F0" align="center" width="640">
 						<tr>
 							<td>
-								<table class="whiteBG" style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color: #F0F0F0; width: 640px; text-align: center; color: #ffffff;" cellpadding="0" cellspacing="0" border="0" bgcolor="#F0F0F0" align="center" width="640">
+								<table class="whiteBG redBG" style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color: #F0F0F0; width: 640px; text-align: center; color: #ffffff;" cellpadding="0" cellspacing="0" border="0" bgcolor="#F0F0F0" align="center" width="640">
 									<tr>
-										<td>
-											<table style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color: #F0F0F0; width: 600px; text-align: center; color: #ffffff;" cellpadding="0" cellspacing="0" border="0" bgcolor="#F0F0F0" align="center" width="600">
+										<td class="redBG">
+											<table class="redBG" style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color: #F0F0F0; width: 600px; text-align: center; color: #ffffff;" cellpadding="0" cellspacing="0" border="0" bgcolor="#F0F0F0" align="center" width="600">
 												<tr>
-													<td class="w100pc mobile center" style="padding: 0; margin: 0; background-color: #ffffff; color: #ffffff; text-align: center; border-right: 3px solid #ffffff" bgcolor="#ffffff" align="center" width="200">
+													<td class="w100pc mobile center redBG" style="padding: 0; margin: 0; background-color: #ffffff; color: #ffffff; text-align: center; border-right: 3px solid #ffffff" bgcolor="#ffffff" align="center" width="200">
 														<!-- IMAGE LINK CODE #1-->
 														<a href="https://www.facebook.com/fcredstarchicago/" target="_blank"><img src="https://gallery.mailchimp.com/99237d4f3ba6067e8f72c4058/images/4a74406b-e8d3-4d20-bd31-1a4d85c2840f.jpg" width="300" alt="2019 FC Red Star Chicago youth soccer camp participants" /></a>
 													</td>
-													<td class="w100pc mobile center" style="padding: 0; margin: 0; background-color: #ffffff; color: #ffffff; text-align: center;" bgcolor="#ffffff" align="center" width="200">
+													<td class="w100pc mobile center redBG" style="padding: 0; margin: 0; background-color: #ffffff; color: #ffffff; text-align: center;" bgcolor="#ffffff" align="center" width="200">
 														<!-- IMAGE LINK CODE #2 -->
 														<a href="https://www.facebook.com/fcredstarchicago/" target="_blank"><img src="https://gallery.mailchimp.com/99237d4f3ba6067e8f72c4058/images/d4e3442c-e62c-4c59-bc45-7b72ea2ae676.jpg" width="300" alt="2019 FC Red Star Chicago youth soccer camp participants" /></a>
 													</td>
 												</tr>
 												<tr style="background-color: #ffffff; color: #000000">
-													<td colspan="2" style="padding: 0px 20px; font-family: Helvetica, sans-serif;">
-														<p style="font-size: 12px; font-weight: normal;"> We offer weekly camps for boys and girls ages 5-14, with <strong>half-day and full-day options</strong> from 9am-12pm and 9am-4pm. <strong>FREE</strong> extended care is also available starting at 8:30am and ending at 5pm. </p>
+													<td class="redBG" colspan="2" style="padding: 0px 20px; font-family: Helvetica, sans-serif;">
+														<p class="redBG" style="font-size: 12px; font-weight: normal;"> We offer weekly camps for boys and girls ages 5-14, with <strong class="redBG">half-day and full-day options</strong> from 9am-12pm and 9am-4pm. <strong class="redBG">FREE</strong> extended care is also available starting at 8:30am and ending at 5pm. </p>
 													</td>
 												</tr>
 											</table>
@@ -241,14 +341,14 @@
 					</table>
 					<!-- END OF BLINK GET SPECIAL PRICING BANNER  -->
 					<!-- TIER SPECIAL PRICING -->
-					<table style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color: #F0F0F0; width: 640px; text-align: center; color: #ffffff;" cellpadding="0" cellspacing="0" border="0" bgcolor="#F0F0F0" align="center" width="640">
+					<table class="redBG" style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color: #F0F0F0; width: 640px; text-align: center; color: #ffffff;" cellpadding="0" cellspacing="0" border="0" bgcolor="#F0F0F0" align="center" width="640">
 						<tr>
-							<td>
-								<table style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color: #e00420; width: 606px; text-align: center; color: #ffffff;" cellpadding="0" cellspacing="0" border="0" bgcolor="#e00420" align="center" width="606">
+							<td class="redBG">
+								<table class="redBG" style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color: #e00420; width: 606px; text-align: center; color: #ffffff;" cellpadding="0" cellspacing="0" border="0" bgcolor="#e00420" align="center" width="606">
 									<tr>
-										<td style="mso-padding-alt:0pt;mso-padding-bottom-alt:10pt;padding: 10px 10px; font-family:Helvetica, Arial, sans-serif;" align="center">
-											<p class="mobileFont center" style="padding: 0; margin: 0; font-size: 22px; font-weight: 800;"> FEBRUARY SPECIAL $50 OFF
-												<br /> <span style="font-size: 12px">At checkout use discount code FEBRUARY</span> </p>
+										<td class="redBG" style="mso-padding-alt:0pt;mso-padding-bottom-alt:10pt;padding: 10px 10px; font-family:Helvetica, Arial, sans-serif;" align="center">
+											<p class="mobileFont center redBG" style="padding: 0; margin: 0; font-size: 22px; font-weight: 800;"> FEBRUARY SPECIAL $50 OFF
+												<br /> <span class="redBG" style="font-size: 12px">At checkout use discount code FEBRUARY</span> </p>
 										</td>
 									</tr>
 								</table>
@@ -257,13 +357,13 @@
 					</table>
 					<!-- END OF TIER SPECIAL PRICING -->
 					<!-- BLINK BUYS BODY TEXT BANNER -->
-					<table class="whiteBG" style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color: #F0F0F0; width: 640px; text-align: center; color: #ffffff;" cellpadding="0" cellspacing="0" border="0" bgcolor="#F0F0F0" align="center" width="640">
+					<table class="whiteBG redBG" style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color: #F0F0F0; width: 640px; text-align: center; color: #ffffff;" cellpadding="0" cellspacing="0" border="0" bgcolor="#F0F0F0" align="center" width="640">
 						<tr>
-							<td>
-								<table class="whiteBG" style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color: #F0F0F0; width: 640px; text-align: center; color: #ffffff;" cellpadding="0" cellspacing="0" border="0" bgcolor="#F0F0F0" align="center" width="640">
+							<td class="redBG">
+								<table class="whiteBG redBG" style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color: #F0F0F0; width: 640px; text-align: center; color: #ffffff;" cellpadding="0" cellspacing="0" border="0" bgcolor="#F0F0F0" align="center" width="640">
 									<tr>
-										<td>
-											<table style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color: #F0F0F0; width: 600px; text-align: center; color: #ffffff;" cellpadding="0" cellspacing="0" border="0" bgcolor="#F0F0F0" align="center" width="600">
+										<td class="redBG">
+											<table class="redBG" style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color: #F0F0F0; width: 600px; text-align: center; color: #ffffff;" cellpadding="0" cellspacing="0" border="0" bgcolor="#F0F0F0" align="center" width="600">
 												<tr>
 													<td> </td>
 												</tr>
@@ -276,48 +376,48 @@
 					</table>
 					<!-- END OF BLINK BUYS BODY TEXT BANNER  -->
 					<!-- FAKE TABLE - SPACER  -->
-					<table style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color: #F0F0F0; width: 640px; text-align: center;" cellpadding="0" cellspacing="0" border="0" bgcolor="#F0F0F0" align="center" width="640">
+					<table class="redBG" style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color: #F0F0F0; width: 640px; text-align: center;" cellpadding="0" cellspacing="0" border="0" bgcolor="#F0F0F0" align="center" width="640">
 						<tr>
-							<td style="font-size: 10px; padding-bottom: 20px">
-								<p style="padding: 0; margin: 0">&nbsp;</p>
+							<td class="redBG" style="font-size: 10px; padding-bottom: 20px">
+								<p class="redBG" style="padding: 0; margin: 0">&nbsp;</p>
 							</td>
 						</tr>
 					</table>
 					<!-- END OF FAKE TABLE - SPACER  -->
 					<!-- REGISTER TODAY CTA  -->
-					<table style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color: #F0F0F0; width: 640px; text-align: center;" cellpadding="0" cellspacing="0" border="0" bgcolor="#F0F0F0" align="center" width="640">
+					<table class="redBG" style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color: #F0F0F0; width: 640px; text-align: center;" cellpadding="0" cellspacing="0" border="0" bgcolor="#F0F0F0" align="center" width="640">
 						<tr>
-							<td style="font-size: 10px;" align="center">
+							<td class="redBG" style="font-size: 10px;" align="center">
 								<!--[if mso]>
 										  <v:rect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.facebook.com/fcredstarchicago/" style="height:50px;v-text-anchor:middle;width:200px;" strokecolor="#e00420" fillcolor="#e00420">
 											<w:anchorlock/>
 											<center style="color:#ffffff;font-family:sans-serif;font-size:14px;font-weight:bold;">REGISTER TODAY!</center>
 										  </v:rect>
 										<![endif]-->
-								<!--[if !mso]><!-- --><a class="center" href="https://www.facebook.com/fcredstarchicago/" style="background-color:#e00420;border:1px solid #e00420;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:14px;font-weight:bold;line-height:50px;text-align:center;text-decoration:none;width:200px;-webkit-text-size-adjust:none;mso-hide:all;" target="_blank">REGISTER TODAY!</a>
+								<!--[if !mso]><!-- --><a class="center whiteBackground" href="https://www.facebook.com/fcredstarchicago/" style="background-color:#e00420;border:1px solid #e00420;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:14px;font-weight:bold;line-height:50px;text-align:center;text-decoration:none;width:200px;-webkit-text-size-adjust:none;mso-hide:all;" target="_blank">REGISTER TODAY!</a>
 								<!--<![endif]-->
 							</td>
 						</tr>
 					</table>
 					<!-- END OF REGISTER TODAY CTA  -->
 					<!-- FAKE TABLE - SPACER  -->
-					<table style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color: #F0F0F0; width: 640px; text-align: center;" cellpadding="0" cellspacing="0" border="0" bgcolor="#F0F0F0" align="center" width="640">
+					<table class="redBG" style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color: #F0F0F0; width: 640px; text-align: center;" cellpadding="0" cellspacing="0" border="0" bgcolor="#F0F0F0" align="center" width="640">
 						<tr>
-							<td style="font-size: 10px; padding-bottom: 20px">
-								<p style="padding: 0; margin: 0">&nbsp;</p>
+							<td class="redBG" style="font-size: 10px; padding-bottom: 20px">
+								<p class="redBG" style="padding: 0; margin: 0">&nbsp;</p>
 							</td>
 						</tr>
 					</table>
 					<!-- END OF FAKE TABLE - SPACER  -->
 					<!-- FOOTER - SOCAIL ICONS -->
-					<table style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color: #e00420; width: 640px; text-align: center;" cellpadding="0" cellspacing="0" border="0" bgcolor="#e00420" align="center" width="640">
+					<table class="redBG" style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color: #e00420; width: 640px; text-align: center;" cellpadding="0" cellspacing="0" border="0" bgcolor="#e00420" align="center" width="640">
 						<tr class="center">
-							<td class="center" align="center">
+							<td class="center redBG" align="center">
 								<!--[if mso]><br><!--<![endif]-->
-								<p class="center" style="margin: 5px auto;">
-									<a href="https://www.facebook.com/westloopsoccerclub/" name="facebook" target="_blank"><img border="0" height="50" alt="facebook" src="http://cdn.boschtools.com/Boschtools/product-registration/facebook@2x.png" width="50"></a>
-									<a href="https://twitter.com/westloopsoccer" name="twitter" target="_blank"><img border="0" height="50" alt="twitter" src="http://cdn.boschtools.com/Boschtools/product-registration/twitter@2x.png" width="50"></a>
-									<a href="https://www.youtube.com/channel/UCVLnIFiR0DsKTdtPdcmwCjA" name="youtube" target="_blank"><img border="0" height="50" alt="youtube" src="http://cdn.boschtools.com/Boschtools/product-registration/youtube@2x.png" width="50"></a>
+								<p class="center redBG" style="margin: 5px auto;">
+									<a class="whiteBackground" href="https://www.facebook.com/westloopsoccerclub/" name="facebook" target="_blank"><img class="redBG" border="0" height="50" alt="facebook" src="http://cdn.boschtools.com/Boschtools/product-registration/facebook@2x.png" width="50"></a>
+									<a class="whiteBackground" href="https://twitter.com/westloopsoccer" name="twitter" target="_blank"><img class="redBG" border="0" height="50" alt="twitter" src="http://cdn.boschtools.com/Boschtools/product-registration/twitter@2x.png" width="50"></a>
+									<a class="whiteBackground" href="https://www.youtube.com/channel/UCVLnIFiR0DsKTdtPdcmwCjA" name="youtube" target="_blank"><img class="redBG" border="0" height="50" alt="youtube" src="http://cdn.boschtools.com/Boschtools/product-registration/youtube@2x.png" width="50"></a>
 								</p>
 								<!--[if mso]><br><!--<![endif]-->
 							</td>
@@ -325,24 +425,24 @@
 					</table>
 					<!-- END OF FOOTER - SOCAIL ICONS -->
 					<!-- FOOTER - PRIVACY SETTINGS -->
-					<table style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color: #F0F0F0; width: 640px; text-align: center;" cellpadding="0" cellspacing="0" border="0" bgcolor="#F0F0F0" align="center" width="640">
+					<table class="redBG" style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color: #F0F0F0; width: 640px; text-align: center;" cellpadding="0" cellspacing="0" border="0" bgcolor="#F0F0F0" align="center" width="640">
 						<tr>
-							<td align="left" style="padding: 0px 12px; font-family: Helvetica, Arial, sans-serif; font-size: 12px; color: #000000; font-weight: normal;" width="30%">
-								<p>FC Red Star Chicago is officially licensed youth soccer club of the famous Serbian Soccer Club Red Star Belgrade. The club was founded by a group of professional youth soccer coaches with a single mission: to provide a superior and consistent youth soccer program for all children who have the vivid passion to learn and play the beautiful game.</p>
+							<td class="redBG" align="left" style="padding: 0px 12px; font-family: Helvetica, Arial, sans-serif; font-size: 12px; color: #000000; font-weight: normal;" width="30%">
+								<p class="redBG">FC Red Star Chicago is officially licensed youth soccer club of the famous Serbian Soccer Club Red Star Belgrade. The club was founded by a group of professional youth soccer coaches with a single mission: to provide a superior and consistent youth soccer program for all children who have the vivid passion to learn and play the beautiful game.</p>
 							</td>
-							<td align="center" style="padding: 0px 12px; font-family: Helvetica, Arial, sans-serif; font-size: 12px; color: #000000; font-weight: normal;" width="30%">
-								<a href="https://www.facebook.com/fcredstarchicago/" target="_blank"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Logo_FC_Red_Star_Belgrade.svg/1200px-Logo_FC_Red_Star_Belgrade.svg.png" width="120" alt="FC Red Star Chicago logo"> </a>
+							<td class="redBG" align="center" style="padding: 0px 12px; font-family: Helvetica, Arial, sans-serif; font-size: 12px; color: #000000; font-weight: normal;" width="30%">
+								<a class="redBG" href="https://www.facebook.com/fcredstarchicago/" target="_blank"> <img class="redBG" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Logo_FC_Red_Star_Belgrade.svg/1200px-Logo_FC_Red_Star_Belgrade.svg.png" width="120" alt="FC Red Star Chicago logo"> </a>
 							</td>
-							<td align="left" style="padding: 0px 12px; font-family: Helvetica, Arial, sans-serif; font-size: 12px; color: #000000; font-weight: normal;" width="30%">
-								<h4>FC RED STAR CHICAGO</h4>
-								<p>Chicago, Illinois 60657
+							<td class="redBG" align="left" style="padding: 0px 12px; font-family: Helvetica, Arial, sans-serif; font-size: 12px; color: #000000; font-weight: normal;" width="30%">
+								<h4 class="redBG">FC RED STAR CHICAGO</h4>
+								<p class="redBG">Chicago, Illinois 60657
 									<br /> +1-312-450-0861</p>
-								<p> <a href="emailto:info@fcredstarchicago.com" style="color: #000000">info@fcredstarchicago.com</a> </p>
+								<p class="redBG"> <a class="redBG" href="emailto:info@fcredstarchicago.com" style="color: #000000">info@fcredstarchicago.com</a> </p>
 							</td>
 						</tr>
 						<tr>
-							<td colspan="3">
-								<p style="font-size: 10px; color: #000000">© FCRSC Inc. ALL RIGHTS RESERVED!</p>
+							<td colspan="3" class="redBG">
+								<p class="redBG" style="font-size: 10px; color: #000000">© FCRSC Inc. ALL RIGHTS RESERVED!</p>
 							</td>
 						</tr>
 					</table>
