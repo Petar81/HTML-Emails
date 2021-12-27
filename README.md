@@ -1,5 +1,5 @@
 # HTML-Emails
-My sample templates (responsive, Miscrosoft Office (mso) compatible, dark mode optimized...)
+My sample templates (responsive, Miscrosoft Outlook (mso) compatible, dark mode optimized...)
 
 ## About me
 
