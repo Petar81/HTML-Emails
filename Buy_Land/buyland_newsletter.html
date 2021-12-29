@@ -25,6 +25,12 @@
 			margin: 0 !important;
 			font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
 		}
+
+		.mobileNavigation a {
+			color: #424242 !important;
+			margin: 5px !important;
+			display: inline-block !important;
+		}
 		
 		/* Add Dark Mode styles for @media (prefers-color-scheme: dark) */
 		
@@ -139,7 +145,7 @@
 				border: 0 !important;
 			}
 			.center {
-				width: 100vw !important;
+				width: 100% !important;
 			}
 			td {
 				max-width: 100vw !important;
@@ -147,7 +153,18 @@
 			.hide {
 				display: none !important;
 			}
-			
+			.mobileP25 {
+				padding: 25px !important;
+			}
+			.mobileNavigation td {
+				width: 40% !important;
+				display: inline-block !important
+			}
+			.mobileNavigation td a{
+				width: 100% !important;
+				display: inline-block !important;
+				padding: 10px 0px !important;
+			}
 		}
 	</style>
 	<!-- Down below is a Microsoft Office specific style tag -->
@@ -212,6 +229,40 @@
 						</tr>
 					</table>
 					<!-- END => MAIN BANNER IMAGE TABLE 600px WIDTH -->
+
+					<!-- START =>  WRAPPER THAT CREATES ALL AROUND 25px PADDING -->
+					<div class="mobileP25">
+
+					<!-- START =>  NAVIGATION TABLE 600px WIDTH -->
+					<table width="600" style="max-width: 600px;background-color: #ffffff;" cellpadding="0" cellspacing="0" border="0" align="center" bgcolor="#ffffff">
+						<tr>
+							<td align="center" style="width: 550px; padding: 10px" bgcolor="#ffffff" width="550">
+								<!-- START => NAVIGATION LINKS -->
+								<table class="mobileNavigation" width="60%" style="width: 60%;background-color: #ffffff; font-size: 11px; font-weight: 900;" cellpadding="0" cellspacing="0" border="0" align="center" bgcolor="#ffffff">
+									<tr>
+										<td align="center" >
+											<a href="https://www.kaufland.de/rabattaktionen/" target="_blank">Sale%</span>
+										</td>
+										<td align="center" >
+											<a href="https://www.kaufland.de/elektronik-und-computer" target="_blank">Electonics</span>
+										</td>
+										<td align="center" >
+											<a href="https://www.kaufland.de/garten-heimwerken" target="_blank">Garden & Hardware</span>
+										</td>
+										<td align="center" >
+											<a href="https://www.kaufland.de/kueche-und-haushalt" target="_blank">Kitchen & Household</span>
+										</td>
+									</tr>
+								</table>
+								<!-- END => NAVIGATION LINKS -->
+							</td>
+						</tr>
+					</table>
+					<!-- END => NAVIGATION TABLE 600px WIDTH -->
+
+					</div>
+					<!-- END =>  WRAPPER THAT CREATES ALL ROUND 25px PADDING -->
+
 				</td>
 				<!-- END => CELL FOR WRAPPER TABLE 100% WIDTH -->
 			</tr>
