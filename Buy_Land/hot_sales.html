@@ -6,6 +6,9 @@
 	<!--[if !mso]><!-- The IE=Edge meta tag is becoming very popular with HTML email developers for one reason: it enables CSS3 and media queries in Windows Phone 7.5 and higher. -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<!--<![endif]-->
+	<!-- By including this metadata in the <head> tag, we can ensure that Dark Mode is enabled in our email for subscribers that have Dark Mode turned on. -->
+	<meta name="color-scheme" content="light dark">
+	<meta name="supported-color-schemes" content="light dark">
 	<!-- Responsive layout is created using the viewport tag and CSS media queries; Pages optimized for a variety of devices must include a meta viewport tag in the head of the document. A meta viewport tag gives the browser instructions on how to control the page's dimensions and scaling. -->
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<!-- These simple format-detection tags stop iOS from turning your phone numbers and dates into links; Apple’s default blue may not go well with your email’s color scheme. -->
@@ -47,6 +50,99 @@
 		
 		a {
 			text-decoration: none;
+		}
+
+		
+		/* Add Dark Mode styles for @media (prefers-color-scheme: dark) */
+		
+		@media (prefers-color-scheme: dark) {
+			/* Custom Dark Mode Images */
+			.darkmode_image {
+				display: block !important;
+				overflow: visible !important;
+				float: none !important;
+				max-height: inherit !important;
+				max-width: inherit !important;
+				line-height: auto !important;
+				margin-top: 0px !important;
+				visibility: inherit !important;
+			}
+			.darkmode_image {
+				display: inline-block !important;
+				overflow: visible !important;
+				float: none !important;
+				max-height: inherit !important;
+				max-width: inherit !important;
+				line-height: auto !important;
+				margin-top: 0px !important;
+				visibility: inherit !important;
+			}
+			.lightmode_image {
+				display: none;
+				display: none !important;
+			}
+			/* Custom Dark Mode Background Color and Font Colors  */
+			*, .blackBG {
+				background-color: #1a1a1a !important;
+				color: #ffffff !important;
+			}
+
+			.kauflandDarkGreen {
+				background-color: #31AB1F !important;
+				color: #ffffff !important;
+			}
+
+			.whiteBackground {
+				background-color: #F0F0F0  !important;
+				color: #000000 !important;
+			}
+			.whiteBorder{
+				border: solid 2px #ffffff;
+			}
+			.borderBottomWhite {
+				border-bottom: 5px solid #ffffff !important;
+			}
+			/* Add this styling for support in Outlook app (Android). 
+			Custom Dark Mode Background Color */
+			[data-ogsc] * {
+				background-color: #1a1a1a !important;
+			}
+			[data-ogsb] * {
+				background-color: #1a1a1a !important;
+			}
+			/* Custom Dark Mode Font Colors */
+			[data-ogsc] h3,
+			[data-ogsc] h4,
+			[data-ogsc] p,
+			[data-ogsc] span,
+			[data-ogsc] a {
+				color: #ffffff !important;
+			}
+			[data-ogsb] h3,
+			[data-ogsb] h4,
+			[data-ogsb] p,
+			[data-ogsb] span,
+			[data-ogsb] a {
+				color: #ffffff !important;
+			}
+			[data-ogsc] .darkmode_image {
+				display: block !important;
+				width: auto !important;
+				overflow: visible !important;
+				float: none !important;
+				max-height: inherit !important;
+				max-width: inherit !important;
+				line-height: auto !important;
+				margin-top: 0px !important;
+				visibility: inherit !important;
+			}
+			[data-ogsc] .lightmode_image {
+				display: none;
+				display: none !important;
+			}
+			[data-ogsc] .darkmode {
+				background-color: #1a1a1a !important;
+			}
 		}
 		
 		@media only screen and (max-width: 640px) {
@@ -101,6 +197,7 @@
 			}
 		}
 	</style>
+	
 	<!--[if mso]>
 		<style>
 		
@@ -125,7 +222,7 @@
 	<div style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;"> &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp; &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp; </div>
 	<center>
 		<!-- WRAPPER TABLE 100% WIDTH -->
-		<table style="width: 100%; background-color: #002147; text-align: center" cellpadding="0" cellspacing="0" border="0" bgcolor="#002147" width="100%">
+		<table class="blackBG" style="width: 100%; background-color: #002147; text-align: center" cellpadding="0" cellspacing="0" border="0" bgcolor="#002147" width="100%">
 			<!-- ROW OF WRAPPER TABLE 100% WIDTH -->
 			<tr>
 				<!-- CELL OF FOR WRAPPER TABLE 100% WIDTH -->
@@ -159,7 +256,7 @@
 					<!-- END OF BLINK BUYS 640px HEADER BANNER WIDTH  -->
 					<table style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; background-color: #e00420; width: 640px; text-align: center;" cellpadding="0" cellspacing="0" border="0" bgcolor="#e00420" align="center" width="640">
 						<tr>
-							<td class="w100pc mobile font16" style="mso-border-top-alt: 8pt solid #e00420; mso-border-bottom-alt: 8pt solid #e00420; padding: 0; margin: 0; background-color: #e00420; font-size: 22px; font-weight: 700; color: #ffffff" bgcolor="#e00420">
+							<td class="w100pc mobile font16 blackBG" style="mso-border-top-alt: 8pt solid #e00420; mso-border-bottom-alt: 8pt solid #e00420; padding: 0; margin: 0; background-color: #e00420; font-size: 22px; font-weight: 700; color: #ffffff" bgcolor="#e00420">
 								<p style="padding: 9px; margin: 0"><a style="text-decoration: none; color: #ffffff" href="http://google.com" target="_blank">HOT WEATHER ...... HOTTER PRICING</a></p>
 							</td>
 						</tr>
@@ -240,7 +337,7 @@
 									<tr>
 										<td class="w100pc mobile center" width="33%" align="center">
 											<a href="http://google.com" target="_blank">
-												<p style="margin: 8px 0"><img class="w100pc mobile" src="https://cars.usnews.com/static/images/Auto/izmo/i105104138/2019_toyota_highlander_angularfront.jpg" width="180"> </p>
+												<p style="margin: 8px 0"><img class="w100pc mobile" src="https://www.pngkey.com/png/full/45-459983_2016-toyota-highlander-le-lease-offer-2016-toyota.png" width="180"> </p>
 											</a>
 											<a style="mso-line-height-rule: exactly; font-size: 16px; line-height: 20px; text-decoration: none; color: #000000" href="http://google.com" target="_blank">
 												<p style="font-size: 16px; mso-line-height-rule: exactly; line-height: 20px; margin: 8px 0">HIGHLANDER</p>
@@ -249,7 +346,7 @@
 										</td>
 										<td class="w100pc mobile center" width="33%" align="center">
 											<a href="http://google.com" target="_blank">
-												<p style="margin: 8px 0"><img class="w100pc mobile" src="https://www.bennetttoyotaoflebanon.com/assets/stock/ColorMatched_01/White/640/cc_2019TOC02_01_640/cc_2019TOC020001_01_640_3U5.jpg" width="180"> </p>
+												<p style="margin: 8px 0"><img class="w100pc mobile" src="https://images.pngnice.com/download/2007/Red-Toyota-Camry-PNG-Clipart.png" width="180"> </p>
 											</a>
 											<a style="mso-line-height-rule: exactly; font-size: 16px; line-height: 20px; text-decoration: none; color: #000000" href="http://google.com" target="_blank">
 												<p style="font-size: 16px; mso-line-height-rule: exactly; line-height: 20px; margin: 8px 0">CAMRY</p>
@@ -258,7 +355,7 @@
 										</td>
 										<td class="w100pc mobile center" width="33%" align="center">
 											<a href="http://google.com" target="_blank">
-												<p style="margin: 8px 0"><img class="w100pc mobile" src="https://c4d709dd302a2586107d-f8305d22c3db1fdd6f8607b49e47a10c.ssl.cf1.rackcdn.com/thumbnails/stock-images/5049df27a216b5e598a1e359192ea373.png" width="180"> </p>
+												<p style="margin: 8px 0"><img class="w100pc mobile" src="https://www.pngkey.com/png/full/394-3945360_new-2018-toyota-tundra-platinum-2019-tundra-trd.png" width="180"> </p>
 											</a>
 											<a style="mso-line-height-rule: exactly; font-size: 16px; line-height: 20px; text-decoration: none; color: #000000" href="http://google.com" target="_blank">
 												<p style="font-size: 16px; mso-line-height-rule: exactly; line-height: 20px; margin: 8px 0">TUNDRA</p>
