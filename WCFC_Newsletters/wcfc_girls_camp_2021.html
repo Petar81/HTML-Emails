@@ -78,10 +78,23 @@
 			.mobile img,
 			.responsiveIMG {
 				display: block !important;
-				width: 100vw !important;
+				width: 100% !important;
 				text-align: center !important;
-				margin: 0 !important;
+				margin: 0 auto !important;
 				padding: 0 !important;
+			}
+			body {
+				display: block !important;
+				width: 94vw !important;
+				text-align: center !important;
+				margin: 0 auto !important;
+				padding: 0 !important;
+				box-sizing: border-box !important;
+			}
+			.col {
+				display: table-cell !important;
+				table-layout: fixed !important;
+				width: 25vw !important;
 			}
 			.center {
 				width: 100vw !important;
@@ -106,6 +119,9 @@
 			}
 			.vw100 {
 				width: 100vw !important;
+			}
+			.vw80 {
+				width: 80vw !important;
 			}
 			.alignR {
 				display: table-footer-group !important;
@@ -417,26 +433,26 @@
 							<td style="padding: 0px 15px 10px 55px; background:  #ffffff" width="48%" align="center"> 
 							<h4>PRICING OVERVIEW</h4>
 							<div style="overflow-x:auto;">
-								<table style="width:100%; border: 1px solid black; black; text-align: left" cellpadding="5" cellspacing="5" >
+								<table class="vw80" style="width:100%; border: 1px solid black; black; text-align: left" cellpadding="5" cellspacing="5" >
 								  <tr style="border: 1px solid black">
-									<th style="border: 1px solid black">DURATION</th>
-									<th style="border: 1px solid black">PLAN</th>
-									<th style="border: 1px solid black">PRICE</th>
+									<th class="col" style="border: 1px solid black">DURATION</th>
+									<th class="col" style="border: 1px solid black">PLAN</th>
+									<th class="col" style="border: 1px solid black">PRICE</th>
 								  </tr>
 								  <tr>
-									<td style="border: 1px solid black">1 Month</td>
-									<td style="border: 1px solid black">*All Inclusive</td>
-									<td style="border: 1px solid black">$2500</td>
+									<td class="col" style="border: 1px solid black">1 Month</td>
+									<td class="col" style="border: 1px solid black">*All Inclusive</td>
+									<td class="col" style="border: 1px solid black">$2500</td>
 								  </tr>
 								  <tr>
-									<td style="border: 1px solid black">2 Months</td>
-									<td style="border: 1px solid black">*All Inclusive</td>
-									<td style="border: 1px solid black">$4500</td>
+									<td class="col" style="border: 1px solid black">2 Months</td>
+									<td class="col" style="border: 1px solid black">*All Inclusive</td>
+									<td class="col" style="border: 1px solid black">$4500</td>
 								  </tr>
 								   <tr>
-									<td style="border: 1px solid black">3 Months</td>
-									<td style="border: 1px solid black">*All Inclusive</td>
-									<td style="border: 1px solid black">$6000</td>
+									<td class="col" style="border: 1px solid black">3 Months</td>
+									<td class="col" style="border: 1px solid black">*All Inclusive</td>
+									<td class="col" style="border: 1px solid black">$6000</td>
 								  </tr>
 								</table>
 								</div>
